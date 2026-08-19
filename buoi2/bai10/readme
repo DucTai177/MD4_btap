@@ -1,0 +1,25 @@
+Báo Cáo Phân Tích So Sánh CommonJS và ES Module
+ 1. Khác biệt trong cấu hình package.json
+Điểm khác biệt căn bản và bắt buộc giữa hai phiên bản nằm ở khai báo thuộc tính `"type"` trong file `package.json`:
+
+* **Trong `project-esm/package.json`**:
+```json
+{
+  "name": "project-esm",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
+
+còn file project-cjs 
+{
+  "name": "project-cjs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}

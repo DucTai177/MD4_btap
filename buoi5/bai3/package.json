@@ -1,0 +1,22 @@
+{
+  "name": "bai3",
+  "version": "1.0.0",
+  "description": "1\\. Tạo Author kèm 2 Books (Nested Write) --- Đã tạo thành công Author và Books: { id: 1, name: 'Robert C. Martin', books: \\[ { id: 1, title: 'Clean Code', price: 250000, authorId: 1 }, { id: 2, title: 'Clean Architecture', price: 280000, authorId: 1 } \\] }",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "prisma": "^7.9.1"
+  },
+  "dependencies": {
+    "@prisma/client": "^7.9.1",
+    "express": "^5.2.1",
+    "sequelize": "^6.37.8",
+    "sqlite3": "^6.0.1"
+  }
+}

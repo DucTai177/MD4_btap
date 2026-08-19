@@ -1,0 +1,33 @@
+Kiểm chứng thứ tự Event Loop trong Node.js
+
+ Dự đoán
+
+A: Bắt đầu
+
+B: Kết thúc đồng bộ
+
+nextTick
+
+Promise
+
+setTimeout
+
+setImmediate
+
+ Kết quả thực tế
+
+A: Bắt đầu
+
+B: Kết thúc đồng bộ
+
+nextTick
+
+Promise
+
+setTimeout
+
+setImmediate
+
+\## Giải thích
+
+Code đồng bộ `A: Bắt đầu` và `B: Kết thúc đồng bộ`) được Call Stack ưu tiên thực thi trước tiên. Ngay sau khi Call Stack rỗng, hàng đợi Microtask chạy với độ ưu tiên cao nhất thuộc về `process.nextTick` trước rồi mới đến `Promise.then`. Cuối cùng, Event Loop chuyển qua Macrotask/Timers phase để gọi callback của `setTimeout`, sau đó đến Check phase để thực thi `setImmediate`.
